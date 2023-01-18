@@ -17,7 +17,7 @@
   <div class="loginPopup" id="popupForm">
     <div class="formPopup" id="popupForm">
       <div class="form-container">
-        <form method="post" action="/index.php" class="formContainer">
+        <form method="post" action="http://localhost:5000/api/user" class="formContainer">
           <h3>Sponsorship</h3>
           <h4>(Your data is Safe with us)</h4>
           <label for="fullName"></label>
@@ -27,12 +27,11 @@
           <label for="email"></label>
           <input type="text" id="email" placeholder="Your Email" name="email" required>
           <label for="contno"></label>
-          <input type="tel" id="contno" placeholder="99-875-7845 Phone Number" name="contno"
-            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+          <input type="text" id="contno" placeholder="Your Phone Number" pattern="[789][0-9]{9}" name="contno" required>
           <label for="message"></label>
           <textarea type="text" id="message" placeholder="Your Message" name="message" required></textarea>
           <div class="flex-buttons">
-            <button type="submit" class="btn-pus">Submit</button>
+            <button type="" class="btn-pus">Submit</button>
             <button type="button" class="btn-puc cancel" onclick=closeForm()>Close</button>
           </div>
         </form>
