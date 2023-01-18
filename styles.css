@@ -95,7 +95,7 @@ ul {
   background-image: url("./assets/Rectangle2.png");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  min-height: 650px;
   height: 100vh;
   width: 100vw;
 }
