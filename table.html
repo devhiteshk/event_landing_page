@@ -7,16 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show table</title>
 
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: scroll;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 4px;
+        }
+    </style>
+
     <script>
-        fetch("https://eventlanding.onrender.com/api/data").then(
-            res => {
+        fetch("https://eventlanding.onrender.com/api/data", { method: 'GET' })
+            .then(res => {
                 res.json().then(
-                    data => {
-                        console.log(data.data);
-                        if (data.data.length > 0) {
+                    arr => {
+                        arr.reverse()
+
+                        if (arr.length > 0) {
                             var temp = "";
-                            let i = 1;
-                            data.data.forEach((itemData) => {
+                            let id = 1
+                            arr.forEach((itemData) => {
                                 temp += "<tr>";
                                 temp += "<td>" + id + "</td>";
                                 temp += "<td>" + itemData.fullName + "</td>";
@@ -24,14 +42,16 @@
                                 temp += "<td>" + itemData.email + "</td>";
                                 temp += "<td>" + itemData.contno + "</td>";
                                 temp += "<td>" + itemData.message + "</td></tr>";
-                                i += 1;
+                                id += 1;
                             });
                             document.getElementById('data').innerHTML = temp;
+
                         }
                     }
                 )
             }
-        )
+            )
+
     </script>
 </head>
 
