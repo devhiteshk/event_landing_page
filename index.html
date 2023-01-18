@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./popup.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
     integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
@@ -13,6 +14,31 @@
 </head>
 
 <body>
+  <div class="loginPopup" id="popupForm">
+    <div class="formPopup" id="popupForm">
+      <div class="form-container">
+        <form method="post" action="/index.php" class="formContainer">
+          <h3>Sponsorship</h3>
+          <h4>(Your data is Safe with us)</h4>
+          <label for="fullName"></label>
+          <input type="text" id="fullName" placeholder="Your Full Name" name="fullName" required>
+          <label for="companyName"></label>
+          <input type="text" id="companyName" placeholder="Your Company Name" name="companyName" required>
+          <label for="email"></label>
+          <input type="text" id="email" placeholder="Your Email" name="email" required>
+          <label for="contno"></label>
+          <input type="tel" id="contno" placeholder="99-875-7845 Phone Number" name="contno"
+            pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+          <label for="message"></label>
+          <textarea type="text" id="message" placeholder="Your Message" name="message" required></textarea>
+          <div class="flex-buttons">
+            <button type="submit" class="btn-pus">Submit</button>
+            <button type="button" class="btn-puc cancel" onclick=closeForm()>Close</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
   <div class="container hero-banner">
     <header>
       <img src="./assets/logo.png" class="logo">
@@ -57,14 +83,18 @@
         <p class="hero-info">Time - 1000 hrs ET/1500 hrs GMT</p>
         <div class="two-buttons">
           <p>
-          <div class="button-hero-1">
-            <a href="#">Reverse Your Pass Now</a>
-          </div>
+            <a onclick=openForm() href="#">
+              <div class="button-hero-1">
+                Reverse Your Pass Now
+              </div>
+            </a>
           </p>
           <p>
-          <div class="button-hero-2">
-            <a href="#">Interested In SponsorShip</a>
-          </div>
+            <a href="#">
+              <div class="button-hero-2">
+                Interested In SponsorShip
+              </div>
+            </a>
           </p>
         </div>
       </div>
@@ -78,7 +108,8 @@
         </div>
         <div class="description-about-us">
           Faced with increasing economic uncertainty and the costs associated with the ever-increasing administrative
-          burden, today's business leaders must look inside their businesses to accelerate profitability and growth. One
+          burden, today's business leaders must look inside their businesses to accelerate profitability and growth.
+          One
           way to increase your competitiveness is to implement best-in-class cost management software as part of your
           overall business process management strategy. It can play an important role in increasing productivity,
           reducing waste and unwanted costs, and creating value through digital transformation. It allows leaders to
@@ -259,7 +290,8 @@
 
     <div class="ind-h">
       <h2>Industries</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet augue luctus ipsum sagittis, ac mollis
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet augue luctus ipsum sagittis, ac
+        mollis
         eros facilisis.</p>
     </div>
 
@@ -448,8 +480,10 @@
   <footer>
     <div class="futurista">
       <img src="./assets/logo.png" alt="">
-      <p>The 21st century has seen a complete change in the way life operates on this planet. We are at the cusp of the
-        4th Industrial Revolution that will be based on the code, data or information based social and economic system.
+      <p>The 21st century has seen a complete change in the way life operates on this planet. We are at the cusp of
+        the
+        4th Industrial Revolution that will be based on the code, data or information based social and economic
+        system.
       </p>
       <input type="text">
       <button class="btn">Subscribe</button>

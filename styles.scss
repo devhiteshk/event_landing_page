@@ -5,6 +5,10 @@
   padding: 0;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 hr {
   height: 1px;
   width: 100%;
@@ -67,6 +71,13 @@ body {
   height: 42px;
   width: 227px;
   border-radius: 5px;
+}
+.button-hero-1:hover {
+  cursor: pointer;
+}
+
+.button-hero-2:hover {
+  cursor: pointer;
 }
 
 .button-hero-2 {

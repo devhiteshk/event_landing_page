@@ -1,0 +1,75 @@
+.formPopup{
+    text-align: center;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0);
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+}
+
+.form-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+
+}
+
+form{
+    margin-top: 100px;
+    min-width: 280px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 15px 15px;
+    background-color: #fff;
+}
+
+form input{
+    width: 280px;
+    padding: 4px;
+    margin: 4px;
+}
+
+form textarea{
+    width: 280px;
+    padding: 4px;
+    margin: 4px;
+}
+
+form h4{
+    margin-bottom: 20px;
+}
+
+.flex-buttons{
+    margin: 5px;
+}
+
+.btn-pus{
+    background-color: rgb(71, 139, 71) ;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn-pus:hover{
+    cursor: pointer;
+}
+
+.btn-puc:hover{
+    cursor: pointer;
+}
+
+.btn-puc{
+    background-color: rgb(220, 78, 78) ;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+

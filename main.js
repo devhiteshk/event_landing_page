@@ -16,3 +16,10 @@ for (i = 0; i < faq.length; i++) {
     }
   });
 }
+
+function openForm() {
+  document.getElementById("popupForm").style.display = "block";
+}
+function closeForm() {
+  document.getElementById("popupForm").style.display = "none";
+}
