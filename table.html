@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show table</title>
+
+    <script>
+        fetch("https://eventlanding.onrender.com/api/data").then(
+            res => {
+                res.json().then(
+                    data => {
+                        console.log(data.data);
+                        if (data.data.length > 0) {
+                            var temp = "";
+                            let i = 1;
+                            data.data.forEach((itemData) => {
+                                temp += "<tr>";
+                                temp += "<td>" + id + "</td>";
+                                temp += "<td>" + itemData.fullName + "</td>";
+                                temp += "<td>" + itemData.companyName + "</td>";
+                                temp += "<td>" + itemData.email + "</td>";
+                                temp += "<td>" + itemData.contno + "</td>";
+                                temp += "<td>" + itemData.message + "</td></tr>";
+                                i += 1;
+                            });
+                            document.getElementById('data').innerHTML = temp;
+                        }
+                    }
+                )
+            }
+        )
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Company Name</th>
+                    <th>Email</th>
+                    <th>contno</th>
+                    <th>Salary</th>
+                </tr>
+            </thead>
+            <tbody id="data">
+
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>
